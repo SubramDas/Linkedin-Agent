@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>LinkedIn Post Copier</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #f1f5f9;
+      color: #0f172a;
+      padding: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+    }
+    .card {
+      background: #ffffff;
+      max-width: 550px;
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      margin-top: 10px;
+    }
+    .header {
+      background: #0a66c2;
+      color: #ffffff;
+      padding: 18px 20px;
+      text-align: center;
+    }
+    .header h1 {
+      font-size: 19px;
+      font-weight: 700;
+    }
+    .content {
+      padding: 20px;
+    }
+    .btn-main {
+      display: block;
+      width: 100%;
+      background: #0a66c2;
+      color: #ffffff;
+      border: none;
+      border-radius: 12px;
+      padding: 16px;
+      font-size: 17px;
+      font-weight: 700;
+      text-align: center;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(10, 102, 194, 0.3);
+      transition: background 0.2s, transform 0.1s;
+    }
+    .btn-main:active {
+      transform: scale(0.98);
+      background: #084e96;
+    }
+    .btn-main.copied {
+      background: #16a34a;
+      box-shadow: 0 2px 8px rgba(22, 163, 74, 0.3);
+    }
+    .btn-secondary {
+      display: block;
+      width: 100%;
+      background: #ffffff;
+      color: #0a66c2;
+      border: 2px solid #0a66c2;
+      border-radius: 12px;
+      padding: 14px;
+      font-size: 16px;
+      font-weight: 600;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      margin-top: 12px;
+    }
+    .preview-box {
+      margin-top: 20px;
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-radius: 10px;
+      padding: 16px;
+      font-size: 15px;
+      line-height: 1.6;
+      white-space: pre-wrap;
+      word-break: break-word;
+      color: #1e293b;
+      max-height: 380px;
+      overflow-y: auto;
+    }
+    .label {
+      font-size: 13px;
+      font-weight: 600;
+      color: #64748b;
+      margin-top: 16px;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="header">
+      <h1>🚀 LinkedIn 1-Tap Copier</h1>
+    </div>
+
+    <div class="content">
+      <button id="copyBtn" class="btn-main" onclick="copyAndOpen()">
+        📋 Copy & Open LinkedIn
+      </button>
+
+      <a id="openBtn" href="https://www.linkedin.com/feed/?shareActive=true" target="_blank" class="btn-secondary">
+        ↗️ Just Open LinkedIn
+      </a>
+
+      <div class="label">Post Preview:</div>
+      <div id="postPreview" class="preview-box">Loading draft...</div>
+    </div>
+  </div>
+
+  <script>
+    let postText = "";
+
+    function init() {
+      try {
+        const hash = window.location.hash.substring(1);
+        if (hash) {
+          // Decode UTF-8 string from Base64
+          const decoded = atob(decodeURIComponent(hash));
+          postText = decodeURIComponent(escape(decoded));
+          document.getElementById("postPreview").textContent = postText;
+        } else {
+          document.getElementById("postPreview").textContent = "No post content detected in URL hash.";
+        }
+      } catch (e) {
+        document.getElementById("postPreview").textContent = "Error decoding post content: " + e.message;
+      }
+    }
+
+    async function copyAndOpen() {
+      if (!postText) return;
+      const copyBtn = document.getElementById("copyBtn");
+
+      try {
+        await navigator.clipboard.writeText(postText);
+        copyBtn.textContent = "✓ Copied to Clipboard!";
+        copyBtn.classList.add("copied");
+
+        // Small delay so user sees confirmation, then open LinkedIn
+        setTimeout(() => {
+          window.location.href = "https://www.linkedin.com/feed/?shareActive=true";
+        }, 600);
+      } catch (err) {
+        // Fallback for older browsers
+        const textarea = document.createElement("textarea");
+        textarea.value = postText;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand("copy");
+        document.body.removeChild(textarea);
+
+        copyBtn.textContent = "✓ Copied to Clipboard!";
+        copyBtn.classList.add("copied");
+        setTimeout(() => {
+          window.location.href = "https://www.linkedin.com/feed/?shareActive=true";
+        }, 600);
+      }
+    }
+
+    window.onload = init;
+  </script>
+</body>
+</html>
