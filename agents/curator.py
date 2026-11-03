@@ -38,14 +38,33 @@ class CuratorAgent:
     def __init__(self, llm=llm_service):
         self.llm = llm
 
-    def curate(self, articles: List[Article]) -> CuratedTopic:
-        """Selects the best topic from a list of scouted articles."""
+    def curate(
+        self,
+        articles: List[Article],
+        exclude_topics: Optional[List[Dict[str, str]]] = None,
+    ) -> CuratedTopic:
+        """Selects the best topic from a list of scouted articles, excluding recent coverage."""
         if not articles:
             raise ValueError("No articles provided to curate.")
 
+        exclude_links = {t.get("link", "").strip() for t in (exclude_topics or []) if t.get("link")}
+        exclude_titles = [t.get("title", "").strip().lower() for t in (exclude_topics or []) if t.get("title")]
+
+        # Filter out articles that directly match previously covered links or titles
+        eligible_articles = []
+        for a in articles:
+            if a.link and a.link.strip() in exclude_links:
+                continue
+            if a.title and any(past_t in a.title.lower() for past_t in exclude_titles):
+                continue
+            eligible_articles.append(a)
+
+        # Fallback to all articles if everything was somehow excluded
+        candidates = eligible_articles if eligible_articles else articles
+
         # Format articles into readable text for the prompt
         formatted_list = []
-        for idx, art in enumerate(articles, 1):
+        for idx, art in enumerate(candidates, 1):
             formatted_list.append(
                 f"[{idx}] Source: {art.source}\n"
                 f"Title: {art.title}\n"
@@ -54,11 +73,16 @@ class CuratorAgent:
             )
         articles_text = "\n".join(formatted_list)
 
+        exclusion_note = ""
+        if exclude_titles:
+            past_titles_str = "\n".join(f"- {t}" for t in exclude_titles[:5])
+            exclusion_note = f"\nDO NOT select any story that is substantively the same as these recently covered topics:\n{past_titles_str}\n"
+
         prompt = f"""
         Here are today's trending tech stories:
         
         {articles_text}
-        
+        {exclusion_note}
         Carefully evaluate each one. Select the #1 story that will get the highest engagement and discussion on LinkedIn.
         """
 

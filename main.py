@@ -1,4 +1,5 @@
 import os
+import sys
 from datetime import datetime
 from pathlib import Path
 
@@ -43,6 +44,16 @@ def run_pipeline():
     logger.info(f"📝 Daily Log File:   logs/pipeline_{checkpoint.today}.log")
     logger.info("=" * 60)
 
+    # Check if today's post has already finished completely (prevents duplicate emails on retries)
+    if checkpoint.is_completed() and "--force" not in sys.argv:
+        logger.info(f"\n✅ Today's post for {checkpoint.today} is already completed and sent!")
+        logger.info("💡 To force a fresh rewrite and email send, run: python main.py --force")
+        draft_data = checkpoint.get_draft()
+        if draft_data:
+            logger.info("\n📄 Today's Saved Draft:\n")
+            logger.info(draft_data.get("full_post", ""))
+        return
+
     # 1. Scout Agent: Pull trending news (or resume from checkpoint)
     logger.info("\n[Step 1/4] ScoutAgent: Gathering live tech & AI news...")
     cached_articles = checkpoint.get_articles()
@@ -71,7 +82,10 @@ def run_pipeline():
         logger.info(f"↷ Reusing cached topic from checkpoint: {topic.selected_title}")
     else:
         curator = CuratorAgent()
-        topic = curator.curate(articles)
+        past_topics = checkpoint.get_past_covered_topics(days_back=14)
+        if past_topics:
+            logger.info(f"ℹ️ Excluding {len(past_topics)} topics covered in the past 14 days.")
+        topic = curator.curate(articles, exclude_topics=past_topics)
         checkpoint.save_topic(topic)
         logger.info(f"✓ Winning Story: {topic.selected_title}")
         logger.info(f"✓ Virality Score: {topic.virality_score}/100")

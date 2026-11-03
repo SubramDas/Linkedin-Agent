@@ -73,3 +73,24 @@ class DailyCheckpoint:
     def mark_email_sent(self):
         self.data["email_sent"] = True
         self._save()
+
+    def get_past_covered_topics(self, days_back: int = 14) -> List[Dict[str, str]]:
+        """Returns titles and links of articles successfully covered in past days."""
+        covered = []
+        for state_path in sorted(self.state_dir.glob("*.json"), reverse=True):
+            if state_path.name == f"{self.today}.json":
+                continue  # Skip today
+            try:
+                with open(state_path, "r", encoding="utf-8") as f:
+                    past_data = json.load(f)
+                    if past_data.get("email_sent") and past_data.get("curated_topic"):
+                        topic = past_data["curated_topic"]
+                        covered.append({
+                            "title": topic.get("selected_title", ""),
+                            "link": topic.get("selected_link", ""),
+                        })
+                    if len(covered) >= days_back:
+                        break
+            except Exception:
+                continue
+        return covered
