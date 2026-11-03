@@ -43,21 +43,12 @@ def run_pipeline():
     logger.info(f"📝 Daily Log File:   logs/pipeline_{checkpoint.today}.log")
     logger.info("=" * 60)
 
-    # Check if today's post has already finished completely
-    if checkpoint.is_completed():
-        logger.info(f"\n✅ Today's post for {checkpoint.today} is already completed and sent!")
-        draft_data = checkpoint.get_draft()
-        if draft_data:
-            logger.info("\n📄 Today's Draft:\n")
-            logger.info(draft_data.get("full_post", ""))
-        return
-
     # 1. Scout Agent: Pull trending news (or resume from checkpoint)
     logger.info("\n[Step 1/4] ScoutAgent: Gathering live tech & AI news...")
     cached_articles = checkpoint.get_articles()
     if cached_articles:
         articles = [Article(**a) for a in cached_articles]
-        logger.info(f"↷ Resuming: Loaded {len(articles)} scouted articles from checkpoint.")
+        logger.info(f"↷ Reusing cached: Loaded {len(articles)} scouted articles from checkpoint.")
     else:
         scout = ScoutAgent()
         articles = scout.fetch_articles(limit_per_feed=3)
@@ -72,12 +63,12 @@ def run_pipeline():
         logger.info(f"   Link:      {art.link}")
         logger.info(f"   Summary:   {art.summary}\n")
 
-    # 2. Curator Agent: Evaluate and select winning story
+    # 2. Curator Agent: Evaluate and select winning story (or reuse cached topic)
     logger.info("[Step 2/4] CuratorAgent: Analyzing engagement potential with Gemini...")
     cached_topic = checkpoint.get_topic()
     if cached_topic:
         topic = CuratedTopic(**cached_topic)
-        logger.info(f"↷ Resuming: Loaded curated topic from checkpoint: {topic.selected_title}")
+        logger.info(f"↷ Reusing cached topic from checkpoint: {topic.selected_title}")
     else:
         curator = CuratorAgent()
         topic = curator.curate(articles)
@@ -86,29 +77,24 @@ def run_pipeline():
         logger.info(f"✓ Virality Score: {topic.virality_score}/100")
         logger.info(f"✓ Angle: {topic.hook_angle}")
 
-    # 3. Copywriter Agent: Craft engaging LinkedIn post
-    logger.info("\n[Step 3/4] CopywriterAgent: Writing tailored LinkedIn draft...")
-    cached_draft = checkpoint.get_draft()
-    if cached_draft:
-        draft = LinkedInDraft(**cached_draft)
-        logger.info("↷ Resuming: Loaded drafted post from checkpoint.")
-    else:
-        copywriter = CopywriterAgent()
-        draft = copywriter.draft_post(topic)
-        checkpoint.save_draft(draft)
-        logger.info("✓ Draft successfully written and saved to checkpoint!")
+    # 3. Copywriter Agent: Always crafts a fresh LinkedIn post on every run
+    logger.info("\n[Step 3/4] CopywriterAgent: Generating a fresh tailored LinkedIn draft...")
+    copywriter = CopywriterAgent()
+    draft = copywriter.draft_post(topic)
+    checkpoint.save_draft(draft)
+    logger.info("✓ Fresh draft successfully written and updated in checkpoint!")
 
-    # Save local markdown archive
+    # Save / update local markdown archive
     saved_path = save_draft_archive(draft.full_post, topic.selected_title)
-    logger.info(f"✓ Archived copy saved to: {saved_path}")
+    logger.info(f"✓ Archived copy updated in: {saved_path}")
 
-    # 4. Delivery: Send email alert
-    logger.info("\n[Step 4/4] EmailService: Delivering draft to your inbox...")
+    # 4. Delivery: Send email alert with fresh draft
+    logger.info("\n[Step 4/4] EmailService: Delivering fresh draft to your inbox...")
     email_sent = email_service.send_draft(draft, topic)
 
     if email_sent:
         checkpoint.mark_email_sent()
-        logger.info("✓ Checkpoint marked complete for today!")
+        logger.info("✓ Email sent and checkpoint marked complete!")
 
     logger.info("\n" + "=" * 60)
     logger.info("🎉 PIPELINE RUN COMPLETE")

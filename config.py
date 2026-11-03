@@ -11,7 +11,9 @@ load_dotenv()
 
 # Gemini configuration
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
-GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-3.5-flash")
+raw_models = os.getenv("GEMINI_MODELS", "gemini-3-flash-preview,gemini-3.5-flash,gemini-3.5-flash-lite")
+GEMINI_MODELS = [m.strip() for m in raw_models.split(",") if m.strip()]
+GEMINI_MODEL = GEMINI_MODELS[0] if GEMINI_MODELS else "gemini-3-flash-preview"
 GEMINI_CALL_DELAY_SECONDS = float(os.getenv("GEMINI_CALL_DELAY_SECONDS", "30.0"))
 
 # Email notification configuration (Gmail SMTP)

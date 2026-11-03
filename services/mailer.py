@@ -1,5 +1,6 @@
 import sys
 from pathlib import Path
+from datetime import datetime
 import base64
 import urllib.parse
 import smtplib
@@ -49,7 +50,14 @@ class EmailService:
             print("[EmailService] Please set SENDER_EMAIL, SENDER_APP_PASSWORD, and RECEIVER_EMAIL.")
             return False
 
-        subject = f"🚀 [LinkedIn Draft] {topic.selected_title[:60]}..."
+        time_str = datetime.now().strftime("%H:%M")
+        subject = f"🚀 [LinkedIn Draft - {time_str}] {topic.selected_title[:50]}..."
+
+        # Create multi-part message (plain text + HTML fallback)
+        msg = MIMEMultipart("alternative")
+        msg["Subject"] = subject
+        msg["From"] = self.sender
+        msg["To"] = self.receiver
 
         # Encode full_post into Base64 for the Web Copier
         encoded_post = base64.b64encode(draft.full_post.encode("utf-8")).decode("utf-8")

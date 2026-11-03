@@ -10,53 +10,68 @@ sys.path.append(str(Path(__file__).resolve().parent.parent))
 
 from google import genai
 from google.genai import types
-from google.genai.errors import ServerError, APIError
-from config import GEMINI_API_KEY, GEMINI_MODEL, GEMINI_CALL_DELAY_SECONDS
+from google.genai.errors import ServerError, ClientError, APIError
+from config import GEMINI_API_KEY, GEMINI_MODELS, GEMINI_CALL_DELAY_SECONDS
+from services.logger import logger
 
 T = TypeVar("T", bound=BaseModel)
 
 
 class GeminiQueueService:
-    """Manages Gemini API requests with sequential queuing, retries, and fallback."""
+    """Manages Gemini API requests with sequential queuing, retries, and multi-model fallback."""
 
     def __init__(
         self,
-        model_name: str = GEMINI_MODEL,
+        models: Optional[List[str]] = None,
         delay_seconds: float = GEMINI_CALL_DELAY_SECONDS,
     ):
-        self.model_name = model_name
+        self.models = models or GEMINI_MODELS
         self.delay_seconds = delay_seconds
         self.client = genai.Client(api_key=GEMINI_API_KEY)
         self._lock = threading.Lock()
         self._last_call_time = 0.0
+        self.last_used_model: Optional[str] = None
 
     def _wait_for_rate_limit(self):
         """Enforces a minimum cooldown period between consecutive API requests."""
         elapsed = time.time() - self._last_call_time
         if elapsed < self.delay_seconds:
             sleep_needed = self.delay_seconds - elapsed
-            print(f"[GeminiQueue] Rate limiting: cooling down for {sleep_needed:.2f}s...")
+            logger.info(f"[GeminiQueue] Rate limiting: cooling down for {sleep_needed:.2f}s...")
             time.sleep(sleep_needed)
         self._last_call_time = time.time()
 
     def _execute_with_retry(self, execute_fn):
-        """Executes API call exclusively on the configured model with retries on server load."""
+        """Tries models in order from .env. Falls back on 429 quota or persistent 503 errors."""
         last_error = None
-        for attempt in range(1, 4):
-            try:
-                self._wait_for_rate_limit()
-                return execute_fn(self.model_name)
-            except ServerError as e:
-                last_error = e
-                wait_time = 10 * attempt
-                print(f"[GeminiQueue] High server load on {self.model_name} (attempt {attempt}/3). Retrying in {wait_time}s...")
-                time.sleep(wait_time)
-            except Exception as e:
-                last_error = e
-                print(f"[GeminiQueue] Request error: {e}")
-                raise
 
-        raise last_error or RuntimeError(f"Failed to execute call on {self.model_name} after retries.")
+        for model in self.models:
+            for attempt in range(1, 4):
+                try:
+                    self._wait_for_rate_limit()
+                    result = execute_fn(model)
+                    self.last_used_model = model
+                    logger.info(f"⚡ [Gemini] Successfully executed using model: {model}")
+                    return result
+                except ServerError as e:
+                    last_error = e
+                    wait_time = 5 * attempt
+                    logger.warning(f"⚠️ [Gemini] Server high demand on {model} (attempt {attempt}/3). Retrying in {wait_time}s...")
+                    time.sleep(wait_time)
+                except ClientError as e:
+                    last_error = e
+                    if "429" in str(e):
+                        logger.warning(f"⚠️ [Gemini] Quota exceeded on {model} (429). Switching to next model in list...")
+                        break  # Fall back immediately to next model
+                    else:
+                        logger.error(f"[Gemini] Client error on {model}: {e}")
+                        raise
+                except Exception as e:
+                    last_error = e
+                    logger.warning(f"⚠️ [Gemini] Error on {model}: {e}. Trying fallback...")
+                    break
+
+        raise last_error or RuntimeError(f"All configured Gemini models failed: {self.models}")
 
     def generate_structured(
         self,
