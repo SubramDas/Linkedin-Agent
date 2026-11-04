@@ -1,6 +1,6 @@
 import sys
 from pathlib import Path
-from typing import List
+from typing import List, Optional, Dict
 from pydantic import BaseModel, Field
 
 # Add project root to sys.path
