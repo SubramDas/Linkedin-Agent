@@ -1,0 +1,73 @@
+{
+  "date": "2026-11-04",
+  "scouted_articles": [
+    {
+      "title": "C++26 Disapproved",
+      "link": "https://andreasfertig.com/blog/2026/11/cpp26-dis-failed-how-does-cpp-survive/",
+      "summary": "Comments",
+      "source": "Hacker News",
+      "published": "Wed, 04 Nov 2026 00:33:22 +0000"
+    },
+    {
+      "title": "Jelly Sheet",
+      "link": "https://mrdoob.github.io/codevember-2026/01/",
+      "summary": "Comments",
+      "source": "Hacker News",
+      "published": "Wed, 04 Nov 2026 03:40:50 +0000"
+    },
+    {
+      "title": "Distinct cellular and genetic differences in colorectal cancer in young patients",
+      "link": "https://www.dana-farber.org/newsroom/news-releases/2026/study-reveals-distinct-cellular-and-genetic-differences-in-colorectal-cancer-in-younger-patients",
+      "summary": "Comments",
+      "source": "Hacker News",
+      "published": "Wed, 04 Nov 2026 03:20:13 +0000"
+    },
+    {
+      "title": "India\u2019s EloElo nabs $80M from NBCUniversal to bet on the country\u2019s rising microdrama market",
+      "link": "https://techcrunch.com/2026/11/03/indias-eloelo-nabs-80m-from-nbc-universal-to-bet-on-the-countrys-rising-microdrama-market/",
+      "summary": "StoryTV has more than 33 million monthly active users according to Sensor Tower figures",
+      "source": "TechCrunch",
+      "published": "Wed, 04 Nov 2026 04:45:00 +0000"
+    },
+    {
+      "title": "Anthropic is working on a system to prove AI models\u2019 identity",
+      "link": "https://techcrunch.com/2026/11/03/anthropic-is-working-on-a-system-to-prove-ai-models-identity/",
+      "summary": "Called FlashProve, the system would let anyone check that an AI response really came from the model it claims to be from.",
+      "source": "TechCrunch",
+      "published": "Tue, 03 Nov 2026 22:41:03 +0000"
+    },
+    {
+      "title": "Data centers are turning to old jet engines as the wait for power grows",
+      "link": "https://techcrunch.com/2026/11/03/data-centers-are-turning-to-old-jet-engines-as-the-wait-for-power-grows/",
+      "summary": "The years-long wait for access to the grid and new turbines is causing data center builders to turn to an unusual, less-efficient and less environmentally friendly solution: once-discarded jet engines.",
+      "source": "TechCrunch",
+      "published": "Tue, 03 Nov 2026 22:19:53 +0000"
+    }
+  ],
+  "curated_topic": {
+    "selected_title": "Anthropic is working on a system to prove AI models\u2019 identity",
+    "selected_link": "https://techcrunch.com/2026/11/03/anthropic-is-working-on-a-system-to-prove-ai-models-identity/",
+    "selected_source": "TechCrunch",
+    "virality_score": 89,
+    "why_it_matters": "As enterprises move toward multi-model architectures, the ability to cryptographically verify a model's identity is critical for security, compliance, and preventing model spoofing in the supply chain.",
+    "hook_angle": "The 'Model Spoofing' era has arrived. Anthropic is building the 'Blue Checkmark' for LLM outputs, raising a massive question for tech leads: Do you actually know which model is generating your production data?"
+  },
+  "draft": {
+    "hook": "Imagine your enterprise pipeline processing sensitive financial data using what you \ud835\ude01\ud835\uddf5\ud835\uddf6\ud835\uddfb\ud835\uddf8 is a secure, private LLM\u2014only to find out it was a hijacked, low-tier model spoofing its identity. Anthropic is building the cryptographic \"ID card\" to ensure that never happens.",
+    "key_takeaways": [
+      "\ud83d\udee1\ufe0f \ud835\udde7\ud835\uddf5\ud835\uddf2 \ud835\udde6\ud835\uddfc\ud835\uddf9\ud835\ude02\ud835\ude01\ud835\uddf6\ud835\uddfc\ud835\uddfb: Anthropic is developing a system to cryptographically verify exactly which model is generating a specific response.",
+      "\ud83d\udeab \ud835\udde7\ud835\uddf5\ud835\uddf2 \ud835\udde5\ud835\uddf6\ud835\ude00\ud835\uddf8: \"Model spoofing\" allows malicious actors to swap high-end models for compromised ones in the software supply chain.",
+      "\ud83c\udfd7\ufe0f \ud835\udde7\ud835\uddf5\ud835\uddf2 \ud835\udddc\ud835\uddfa\ud835\uddfd\ud835\uddee\ud835\uddf0\ud835\ude01: This creates a \"Blue Checkmark\" for AI, allowing tech leads to audit model provenance for strict compliance."
+    ],
+    "discussion_question": "\ud83d\udcac As we scale multi-model architectures, how much do you actually trust the \"black box\" of your third-party AI providers?",
+    "hashtags": [
+      "#GenerativeAI",
+      "#CyberSecurity",
+      "#Anthropic",
+      "#EnterpriseTech",
+      "#AIIdentity"
+    ],
+    "full_post": "Imagine your enterprise pipeline processing sensitive financial data using what you \ud835\ude01\ud835\uddf5\ud835\uddf6\ud835\uddfb\ud835\uddf8 is a secure, private LLM\u2014only to find out it was a hijacked, low-tier model spoofing its identity. Anthropic is building the cryptographic \"ID card\" to ensure that never happens.\n\n\ud83d\udee1\ufe0f \ud835\udde7\ud835\uddf5\ud835\uddf2 \ud835\udde6\ud835\uddfc\ud835\uddf9\ud835\ude02\ud835\ude01\ud835\uddf6\ud835\uddfc\ud835\uddfb: Anthropic is developing a system to cryptographically verify exactly which model is generating a specific response.\n\n\ud83d\udeab \ud835\udde7\ud835\uddf5\ud835\uddf2 \ud835\udde5\ud835\uddf6\ud835\ude00\ud835\uddf8: \"Model spoofing\" allows malicious actors to swap high-end models for compromised ones in the software supply chain.\n\n\ud83c\udfd7\ufe0f \ud835\udde7\ud835\uddf5\ud835\uddf2 \ud835\udddc\ud835\uddfa\ud835\uddfd\ud835\uddee\ud835\uddf0\ud835\ude01: This creates a \"Blue Checkmark\" for AI, allowing tech leads to audit model provenance for strict compliance.\n\n\ud83d\udcac As we scale multi-model architectures, how much do you actually trust the \"black box\" of your third-party AI providers?\n\nSource: https://techcrunch.com/2026/11/03/anthropic-is-working-on-a-system-to-prove-ai-models-identity/\n\n#GenerativeAI #CyberSecurity #Anthropic #EnterpriseTech #AIIdentity"
+  },
+  "email_sent": true
+}
