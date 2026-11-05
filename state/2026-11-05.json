@@ -1,0 +1,74 @@
+{
+  "date": "2026-11-05",
+  "scouted_articles": [
+    {
+      "title": "Residential proxies detected on White House network",
+      "link": "https://layer3intel.com/blog/residential-proxies-white-house-network",
+      "summary": "Comments",
+      "source": "Hacker News",
+      "published": "Wed, 04 Nov 2026 20:45:18 +0000"
+    },
+    {
+      "title": "Images 2.6",
+      "link": "https://openai.com/index/introducing-images-2-6/",
+      "summary": "Comments",
+      "source": "Hacker News",
+      "published": "Wed, 04 Nov 2026 23:35:44 +0000"
+    },
+    {
+      "title": "A thousand fewer paths to root",
+      "link": "https://openai.com/index/a-thousand-fewer-paths-to-root/",
+      "summary": "Comments",
+      "source": "Hacker News",
+      "published": "Wed, 04 Nov 2026 23:33:14 +0000"
+    },
+    {
+      "title": "Apple is reportedly cutting budgets for its internal AI usage",
+      "link": "https://techcrunch.com/2026/11/04/apple-is-reportedly-cutting-budgets-for-its-internal-ai-usage/",
+      "summary": "The company is said to be significantly dropping the amount it's spending on AI for its engineering teams.",
+      "source": "TechCrunch",
+      "published": "Thu, 05 Nov 2026 01:26:22 +0000"
+    },
+    {
+      "title": "After the midterms, a bigger clash over data centers could be coming",
+      "link": "https://techcrunch.com/2026/11/04/after-the-midterms-a-bigger-clash-over-data-centers-could-be-coming/",
+      "summary": "Data center opposition crossed party lines in Tuesday\u2019s midterms.",
+      "source": "TechCrunch",
+      "published": "Thu, 05 Nov 2026 01:02:14 +0000"
+    },
+    {
+      "title": "AI PACs spent millions trying to shape Congress \u2014 here\u2019s how they fared",
+      "link": "https://techcrunch.com/2026/11/04/ai-pacs-spent-millions-trying-to-shape-congress-heres-how-they-fared/",
+      "summary": "AI industry PACs spent millions influencing the 2026 midterms, with mixed results. Political groups are already looking toward the next election cycle.",
+      "source": "TechCrunch",
+      "published": "Wed, 04 Nov 2026 22:45:09 +0000"
+    }
+  ],
+  "curated_topic": {
+    "selected_title": "Apple is reportedly cutting budgets for its internal AI usage",
+    "selected_link": "https://techcrunch.com/2026/11/04/apple-is-reportedly-cutting-budgets-for-its-internal-ai-usage/",
+    "selected_source": "TechCrunch",
+    "virality_score": 94,
+    "why_it_matters": "This signals a major shift from the 'AI at all costs' era to a focus on ROI and fiscal discipline, impacting how engineering teams justify AI spend.",
+    "hook_angle": "Is the AI hype cycle finally hitting a reality check? Apple's move to slash internal AI budgets while others are still burning cash suggests a pragmatic pivot that every tech leader should be watching."
+  },
+  "draft": {
+    "hook": "Imagine your team spent months building an AI-powered internal tool, only to be told the compute costs are no longer \"worth it.\" Apple is reportedly leading the charge in this new era of AI fiscal discipline.",
+    "key_takeaways": [
+      "\ud83d\udcc9 \ud835\udde7\ud835\uddf5\ud835\uddf2 \ud835\udde3\ud835\uddf6\ud835\ude03\ud835\uddfc\ud835\ude01: Apple is reportedly slashing internal AI budgets to prioritize efficiency over pure experimentation.",
+      "\ud83d\udcb0 \ud835\udde7\ud835\uddf5\ud835\uddf2 \ud835\udde5\ud835\uddf2\ud835\uddee\ud835\uddf9\ud835\uddf6\ud835\ude01\ud835\ude06: The \"AI at all costs\" phase is dying, replaced by a strict focus on tangible ROI.",
+      "\u2699\ufe0f \ud835\uddd8\ud835\uddfb\ud835\uddf4\ud835\uddf6\ud835\uddfb\ud835\uddf2\ud835\uddf2\ud835\uddff\ud835\uddf6\ud835\uddfb\ud835\uddf4 \ud835\udddc\ud835\uddfa\ud835\uddfd\ud835\uddee\ud835\uddf0\ud835\ude01: Dev teams must now justify every GPU hour instead of just chasing the latest models.",
+      "\u2696\ufe0f \ud835\udde7\ud835\uddf5\ud835\uddf2 \ud835\udde6\ud835\uddf5\ud835\uddf6\ud835\uddf3\ud835\ude01: While competitors are still burning billions, Apple is betting on discipline to win the long game."
+    ],
+    "discussion_question": "\ud83d\udcac Is the AI hype cycle finally hitting a reality check, or is Apple moving too early?",
+    "hashtags": [
+      "#Apple",
+      "#ArtificialIntelligence",
+      "#TechTrends",
+      "#SoftwareEngineering",
+      "#AIHype"
+    ],
+    "full_post": "Imagine your team spent months building an AI-powered internal tool, only to be told the compute costs are no longer \"worth it.\" Apple is reportedly leading the charge in this new era of AI fiscal discipline.\\n\\n\ud83d\udcc9 \ud835\udde7\ud835\uddf5\ud835\uddf2 \ud835\udde3\ud835\uddf6\ud835\ude03\ud835\uddfc\ud835\ude01: Apple is reportedly slashing internal AI budgets to prioritize efficiency over pure experimentation.\\n\\n\ud83d\udcb0 \ud835\udde7\ud835\uddf5\ud835\uddf2 \ud835\udde5\ud835\uddf2\ud835\uddee\ud835\uddf9\ud835\uddf6\ud835\ude01\ud835\ude06: The \"AI at all costs\" phase is dying, replaced by a strict focus on tangible ROI.\\n\\n\u2699\ufe0f \ud835\uddd8\ud835\uddfb\ud835\uddf4\ud835\uddf6\ud835\uddfb\ud835\uddf2\ud835\uddf2\ud835\uddff\ud835\uddf6\ud835\uddfb\ud835\uddf4 \ud835\udddc\ud835\uddfa\ud835\uddfd\ud835\uddee\ud835\uddf0\ud835\ude01: Dev teams must now justify every GPU hour instead of just chasing the latest models.\\n\\n\u2696\ufe0f \ud835\udde7\ud835\uddf5\ud835\uddf2 \ud835\udde6\ud835\uddf5\ud835\uddf6\ud835\uddf3\ud835\ude01: While competitors are still burning billions, Apple is betting on discipline to win the long game.\\n\\n\ud83d\udcac Is the AI hype cycle finally hitting a reality check, or is Apple moving too early?\\n\\nSource: https://techcrunch.com/2026/11/04/apple-is-reportedly-cutting-budgets-for-its-internal-ai-usage/\\n\\n#Apple #ArtificialIntelligence #TechTrends #SoftwareEngineering #AIHype"
+  },
+  "email_sent": true
+}
