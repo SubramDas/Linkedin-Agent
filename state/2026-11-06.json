@@ -1,0 +1,94 @@
+{
+  "date": "2026-11-06",
+  "scouted_articles": [
+    {
+      "title": "Claude Code sends your email address to websites",
+      "link": "https://github.com/anthropics/claude-code/issues/107757",
+      "summary": "Comments",
+      "source": "Hacker News",
+      "published": "Thu, 05 Nov 2026 22:17:15 +0000"
+    },
+    {
+      "title": "Search for everyone",
+      "link": "https://kagi.com/changelog#11820",
+      "summary": "Comments",
+      "source": "Hacker News",
+      "published": "Thu, 05 Nov 2026 20:03:34 +0000"
+    },
+    {
+      "title": "MS Paint Remote Code Execution Vulnerability",
+      "link": "https://www.cve.org/CVERecord?id=CVE-2026-83844",
+      "summary": "Comments",
+      "source": "Hacker News",
+      "published": "Thu, 05 Nov 2026 20:43:42 +0000"
+    },
+    {
+      "title": "The New York Times reportedly in talks to buy Letterboxd for $330 million",
+      "link": "https://techcrunch.com/2026/11/05/the-new-york-times-reportedly-in-talks-to-buy-letterboxd-for-330-million/",
+      "summary": "Letterboxd, an online platform for movie lovers, has grown dramatically in recent years.",
+      "source": "TechCrunch",
+      "published": "Fri, 06 Nov 2026 00:07:18 +0000"
+    },
+    {
+      "title": "Meta, Google, and TikTok sue California AG over teen social media law",
+      "link": "https://techcrunch.com/2026/11/05/meta-google-and-tiktok-sue-california-ag-over-teen-social-media-law/",
+      "summary": "If it goes into effect next year, this California law would restrict social media access for children under 16.",
+      "source": "TechCrunch",
+      "published": "Fri, 06 Nov 2026 00:01:38 +0000"
+    },
+    {
+      "title": "Airbnb says it\u2019s launching an AI travel agent in the first half of 2027",
+      "link": "https://techcrunch.com/2026/11/05/airbnb-says-its-launching-an-ai-travel-agent-in-the-first-half-of-2027/",
+      "summary": "Airbnb says its upcoming AI agent will help travelers plan trips, compare options, manage bookings, and get assistance throughout their stay.",
+      "source": "TechCrunch",
+      "published": "Thu, 05 Nov 2026 22:40:55 +0000"
+    },
+    {
+      "title": "Who May Overrule the Agent? Evidence-Gated Authority in LLM Review Institutions",
+      "link": "https://arxiv.org/abs/2611.05390",
+      "summary": "arXiv:2611.05390v1 Announce Type: new Abstract: Multi-agent language-model systems often add a reviewer to improve an upstream agent's decision. Yet a reviewer can both repair errors and replace decisions that were already correct. We study this as a problem of institutional jurisdiction: conditi...",
+      "source": "ArXiv AI",
+      "published": "Thu, 05 Nov 2026 00:00:00 -0500"
+    },
+    {
+      "title": "Agent Harness Awareness: Turning Verified Telemetry into Operational Control for Tool-Using Agents",
+      "link": "https://arxiv.org/abs/2611.05391",
+      "summary": "arXiv:2611.05391v1 Announce Type: new Abstract: Tool descriptions tell an agent what an action can do, but they do not necessarily reveal whether that action is healthy or suitable at the moment of use. Execution harnesses often possess this information through monitors, traces, and recent failur...",
+      "source": "ArXiv AI",
+      "published": "Thu, 05 Nov 2026 00:00:00 -0500"
+    },
+    {
+      "title": "Uncertainty-Aware Resource Orchestration for Agentic AI Systems",
+      "link": "https://arxiv.org/abs/2611.05392",
+      "summary": "arXiv:2611.05392v1 Announce Type: new Abstract: Agentic artificial intelligence (AI) systems powered by large language models (LLMs) execute as autonomous multi-step pipelines that dynamically invoke tools, integrate observations into memory, and iterate until a task is resolved or a resource bud...",
+      "source": "ArXiv AI",
+      "published": "Thu, 05 Nov 2026 00:00:00 -0500"
+    }
+  ],
+  "curated_topic": {
+    "selected_title": "Claude Code sends your email address to websites",
+    "selected_link": "https://github.com/anthropics/claude-code/issues/107757",
+    "selected_source": "Hacker News",
+    "virality_score": 92,
+    "why_it_matters": "This highlights a critical privacy trade-off in modern AI developer tools where personal identifiers are leaked to external sites during automated tasks. It forces a conversation about security defaults and user consent in the rapidly evolving AI CLI landscape.",
+    "hook_angle": "Is your AI coding assistant leaking your identity without you knowing? A new discovery in Anthropic's Claude Code CLI has sparked a massive debate on where we should draw the line between 'helpful automation' and 'privacy violation.'"
+  },
+  "draft": {
+    "hook": "Imagine pushing a quick bug fix via CLI, only to realize the tool just broadcasted your private email to every domain it touched. Anthropic\u2019s new Claude Code was caught doing exactly that.",
+    "key_takeaways": [
+      "\ud83d\udea8 \ud835\udde7\ud835\uddf5\ud835\uddf2 \ud835\udddf\ud835\uddf2\ud835\uddee\ud835\uddf8: Claude Code CLI sends your email address in the User-Agent header when fetching web content.",
+      "\ud83d\udee0\ufe0f \ud835\udde7\ud835\uddf5\ud835\uddf2 \ud835\udde5\ud835\uddf2\ud835\uddee\ud835\ude00\ud835\uddfc\ud835\uddfb: Anthropic says it helps site owners contact users if a bot misbehaves, but it\u2019s active by default.",
+      "\ud83d\udee1\ufe0f \ud835\udde7\ud835\uddf5\ud835\uddf2 \ud835\udde5\ud835\uddf6\ud835\ude00\ud835\uddf8: This turns a helpful assistant into a potential tracking vector for every site you scrape or analyze."
+    ],
+    "discussion_question": "\ud83d\udcac Is \"traceability\" a valid excuse for leaking personal PII by default, or is this a major security oversight?",
+    "hashtags": [
+      "#AI",
+      "#CyberSecurity",
+      "#ClaudeCode",
+      "#SoftwareEngineering",
+      "#Privacy"
+    ],
+    "full_post": "Imagine pushing a quick bug fix via CLI, only to realize the tool just broadcasted your private email to every domain it touched. Anthropic\u2019s new Claude Code was caught doing exactly that.\n\n\ud83d\udea8 \ud835\udde7\ud835\uddf5\ud835\uddf2 \ud835\udddf\ud835\uddf2\ud835\uddee\ud835\uddf8: Claude Code CLI sends your email address in the User-Agent header when fetching web content.\n\n\ud83d\udee0\ufe0f \ud835\udde7\ud835\uddf5\ud835\uddf2 \ud835\udde5\ud835\uddf2\ud835\uddee\ud835\ude00\ud835\uddfc\ud835\uddfb: Anthropic says it helps site owners contact users if a bot misbehaves, but it\u2019s active by default.\n\n\ud83d\udee1\ufe0f \ud835\udde7\ud835\uddf5\ud835\uddf2 \ud835\udde5\ud835\uddf6\ud835\ude00\ud835\uddf8: This turns a helpful assistant into a potential tracking vector for every site you scrape or analyze.\n\n\ud83d\udcac Is \"traceability\" a valid excuse for leaking personal PII by default, or is this a major security oversight?\n\nSource: https://github.com/anthropics/claude-code/issues/107757\n\n#AI #CyberSecurity #ClaudeCode #SoftwareEngineering #Privacy"
+  },
+  "email_sent": true
+}
