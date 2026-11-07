@@ -1,0 +1,95 @@
+{
+  "date": "2026-11-07",
+  "scouted_articles": [
+    {
+      "title": "A Jev that can ask Opus for help gives Opus accuracy at 4x lower cost",
+      "link": "https://hightouch.com/blog/llm-judges-identity-resolution",
+      "summary": "Comments",
+      "source": "Hacker News",
+      "published": "Fri, 06 Nov 2026 19:48:51 +0000"
+    },
+    {
+      "title": "Libghostty 1.0",
+      "link": "https://mitchellh.com/writing/libghostty-1-0",
+      "summary": "Comments",
+      "source": "Hacker News",
+      "published": "Fri, 06 Nov 2026 23:30:52 +0000"
+    },
+    {
+      "title": "ChatGPT silently passes data between connectors and the bounty wants an ID card",
+      "link": "https://community.openai.com/t/security-follow-up-tool-call-silently-routed-to-a-different-connector/1413053",
+      "summary": "Comments",
+      "source": "Hacker News",
+      "published": "Fri, 06 Nov 2026 22:50:43 +0000"
+    },
+    {
+      "title": "OpenAI reportedly raises an additional $11 billion at a $1.25 trillion valuation",
+      "link": "https://techcrunch.com/2026/11/06/openai-reportedly-raises-an-additional-11-billion-at-a-1-25-trillion-valuation/",
+      "summary": "OpenAI has reportedly raised an additional $11 billion as part of a funding round that hasn't closed yet but is expected to in the coming weeks.",
+      "source": "TechCrunch",
+      "published": "Fri, 06 Nov 2026 22:53:46 +0000"
+    },
+    {
+      "title": "The Duo apps are coming, says Apple",
+      "link": "https://techcrunch.com/2026/11/06/the-duo-apps-are-coming-says-apple/",
+      "summary": "There are now 100,000 Duo-optimized apps, says Apple, and thousands more arrive daily.",
+      "source": "TechCrunch",
+      "published": "Fri, 06 Nov 2026 21:38:05 +0000"
+    },
+    {
+      "title": "Hundreds of Artex AI hacking tools found publicly exposed to the web",
+      "link": "https://techcrunch.com/2026/11/06/hundreds-of-artex-ai-hacking-tools-found-publicly-exposed-to-the-web/",
+      "summary": "Security researchers found hundreds of servers hosting the penetration testing tool Artex exposed to the internet, allowing anyone access to the hacking tool.",
+      "source": "TechCrunch",
+      "published": "Fri, 06 Nov 2026 18:44:38 +0000"
+    },
+    {
+      "title": "Formalizing inverse problems in the age of AI: possibilities, pitfalls, and an invitation",
+      "link": "https://arxiv.org/abs/2611.06962",
+      "summary": "arXiv:2611.06962v1 Announce Type: new Abstract: Proof assistants such as Lean check mathematical proofs down to the axioms, and AI agents have recently made writing such proofs cheap. We describe AutoIP, a Lean library in which classical linear regularization theory, together with the functional ...",
+      "source": "ArXiv AI",
+      "published": "Fri, 06 Nov 2026 00:00:00 -0500"
+    },
+    {
+      "title": "KDASO: Knowledge-Data Dual-Driven Automated Skill Optimization for Liability Adjudication Tasks",
+      "link": "https://arxiv.org/abs/2611.06972",
+      "summary": "arXiv:2611.06972v1 Announce Type: new Abstract: Liability adjudication tasks (e.g., legal charge determination) require analyzing event descriptions against domain-specific skills to determine whether a party should bear liability. While Large Language Models (LLMs) have shown promise in this are...",
+      "source": "ArXiv AI",
+      "published": "Fri, 06 Nov 2026 00:00:00 -0500"
+    },
+    {
+      "title": "BlockLock: Reproducible LLM Inference with Fixed Batch Geometry",
+      "link": "https://arxiv.org/abs/2611.06977",
+      "summary": "arXiv:2611.06977v1 Announce Type: new Abstract: Reproducible LLM inference requires that a request produces the same output regardless of the other requests in the batch. Existing solutions pay for this in different ways: batch-invariant kernels constrain every operator, and isolating prefill wit...",
+      "source": "ArXiv AI",
+      "published": "Fri, 06 Nov 2026 00:00:00 -0500"
+    }
+  ],
+  "curated_topic": {
+    "selected_title": "OpenAI reportedly raises an additional $11 billion at a $1.25 trillion valuation",
+    "selected_link": "https://techcrunch.com/2026/11/06/openai-reportedly-raises-an-additional-11-billion-at-a-1-25-trillion-valuation/",
+    "selected_source": "TechCrunch",
+    "virality_score": 98,
+    "why_it_matters": "This valuation marks a historic turning point in the tech industry, placing a private AI entity in the same valuation tier as global tech giants and signaling the massive capital intensity required for the next phase of AGI development.",
+    "hook_angle": "We just crossed the Rubicon: OpenAI is reportedly seeking a $1.25 Trillion valuation. Is this the most significant investment in human history, or are we witnessing the peak of the most expensive bubble ever recorded?"
+  },
+  "draft": {
+    "hook": "Imagine a private startup becoming more valuable than the GDP of most countries before it even hits the stock market. OpenAI\u2019s reported $1.25 Trillion valuation isn't just a fundraise; it's the most expensive bet on the future of humanity.",
+    "key_takeaways": [
+      "\ud83d\ude80 \ud835\udde7\ud835\uddf5\ud835\uddf2 \ud835\udde0\ud835\uddf6\ud835\uddf9\ud835\uddf2\ud835\ude00\ud835\ude01\ud835\uddfc\ud835\uddfb\ud835\uddf2: Raising $11B at a $1.25T valuation places OpenAI in the same tier as Apple and Microsoft.",
+      "\ud83c\udfd7\ufe0f \ud835\udde7\ud835\uddf5\ud835\uddf2 \ud835\uddd6\ud835\uddee\ud835\uddfd\ud835\uddf6\ud835\ude01\ud835\uddee\ud835\uddf9: This level of funding is required to sustain the massive compute power needed for the AGI era.",
+      "\ud83d\udca1 \ud835\udde7\ud835\uddf5\ud835\uddf2 \ud835\udddc\ud835\uddfa\ud835\uddfd\ud835\uddf9\ud835\uddf6\ud835\uddf0\ud835\uddee\ud835\ude01\ud835\uddf6\ud835\uddfc\ud835\uddfb: We have moved past simple software into the world\u2019s most resource-intensive infrastructure race.",
+      "\u26a0\ufe0f \ud835\udde7\ud835\uddf5\ud835\uddf2 \ud835\udde5\ud835\uddf6\ud835\ude00\ud835\uddf8: This marks either the greatest investment in human history or the peak of the largest tech bubble ever."
+    ],
+    "discussion_question": "\ud83d\udcac At a $1.25T valuation, is OpenAI \"too big to fail,\" or are we reaching the limits of AI hype?",
+    "hashtags": [
+      "#OpenAI",
+      "#ArtificialIntelligence",
+      "#VentureCapital",
+      "#AGI",
+      "#TechTrends"
+    ],
+    "full_post": "Imagine a private startup becoming more valuable than the GDP of most countries before it even hits the stock market. OpenAI\u2019s reported $1.25 Trillion valuation isn't just a fundraise; it's the most expensive bet on the future of humanity.\n\n\ud83d\ude80 \ud835\udde7\ud835\uddf5\ud835\uddf2 \ud835\udde0\ud835\uddf6\ud835\uddf9\ud835\uddf2\ud835\ude00\ud835\ude01\ud835\uddfc\ud835\uddfb\ud835\uddf2: Raising $11B at a $1.25T valuation places OpenAI in the same tier as Apple and Microsoft.\n\n\ud83c\udfd7\ufe0f \ud835\udde7\ud835\uddf5\ud835\uddf2 \ud835\uddd6\ud835\uddee\ud835\uddfd\ud835\uddf6\ud835\ude01\ud835\uddee\ud835\uddf9: This level of funding is required to sustain the massive compute power needed for the AGI era.\n\n\ud83d\udca1 \ud835\udde7\ud835\uddf5\ud835\uddf2 \ud835\udddc\ud835\uddfa\ud835\uddfd\ud835\uddf9\ud835\uddf6\ud835\uddf0\ud835\uddee\ud835\ude01\ud835\uddf6\ud835\uddfc\ud835\uddfb: We have moved past simple software into the world\u2019s most resource-intensive infrastructure race.\n\n\u26a0\ufe0f \ud835\udde7\ud835\uddf5\ud835\uddf2 \ud835\udde5\ud835\uddf6\ud835\ude00\ud835\uddf8: This marks either the greatest investment in human history or the peak of the largest tech bubble ever.\n\n\ud83d\udcac At a $1.25T valuation, is OpenAI \"too big to fail,\" or are we reaching the limits of AI hype?\n\nSource: https://techcrunch.com/2026/11/06/openai-reportedly-raises-an-additional-11-billion-at-a-1-25-trillion-valuation/\n\n#OpenAI #ArtificialIntelligence #VentureCapital #AGI #TechTrends"
+  },
+  "email_sent": true
+}
