@@ -1,0 +1,73 @@
+{
+  "date": "2026-11-08",
+  "scouted_articles": [
+    {
+      "title": "The end of Microsoft Research's AI Frontiers group",
+      "link": "https://hunch.net/?p=13764006",
+      "summary": "Comments",
+      "source": "Hacker News",
+      "published": "Sat, 07 Nov 2026 18:02:17 +0000"
+    },
+    {
+      "title": "GitHub New pull request overview page in public preview",
+      "link": "https://github.blog/changelog/2026-11-05-new-pull-request-overview-page-in-public-preview/",
+      "summary": "Comments",
+      "source": "Hacker News",
+      "published": "Sat, 07 Nov 2026 23:09:40 +0000"
+    },
+    {
+      "title": "What I run on my $10 USD OpenStick homelab",
+      "link": "https://blog.bosscher.ch/posts/openstick/",
+      "summary": "Comments",
+      "source": "Hacker News",
+      "published": "Sat, 07 Nov 2026 18:12:12 +0000"
+    },
+    {
+      "title": "After the midterms, things are looking rocky for Elon Musk and data centers",
+      "link": "https://techcrunch.com/2026/11/07/after-the-midterms-things-are-looking-rocky-for-elon-musk-and-data-centers/",
+      "summary": "On Equity, we unpacked what the midterms mean for the tech industry.",
+      "source": "TechCrunch",
+      "published": "Sat, 07 Nov 2026 22:07:22 +0000"
+    },
+    {
+      "title": "Megaspeed exec was recruited to spy on Nvidia CEO, according to US intelligence memo",
+      "link": "https://techcrunch.com/2026/11/07/chinese-exec-was-recruited-to-spy-on-nvidia-ceo-according-to-us-intelligence-memo/",
+      "summary": "A memo circulated earlier this year reportedly claimed that China\u2019s Ministry of State Security recruited a female technology executive to spy on Nvidia's CEO.",
+      "source": "TechCrunch",
+      "published": "Sat, 07 Nov 2026 21:17:08 +0000"
+    },
+    {
+      "title": "Parents want safer phones for kids. These companies are answering the call.",
+      "link": "https://techcrunch.com/2026/11/07/parents-want-safer-phones-for-kids-these-companies-are-answering-the-call/",
+      "summary": "As parents look for alternatives to unrestricted smartphones, a growing number of companies are building phones designed specifically for kids, from feature-limited mobile devices to minimalist home phones.",
+      "source": "TechCrunch",
+      "published": "Sat, 07 Nov 2026 19:00:00 +0000"
+    }
+  ],
+  "curated_topic": {
+    "selected_title": "The end of Microsoft Research's AI Frontiers group",
+    "selected_link": "https://hunch.net/?p=13764006",
+    "selected_source": "Hacker News",
+    "virality_score": 94,
+    "why_it_matters": "Microsoft is shifting from open-ended AI research to product-focused development, signaling the 'industrialization' phase of AI. This impacts how research is funded and what skills will be valued in the next wave of AI engineering.",
+    "hook_angle": "The era of 'frontier' AI research at Big Tech is officially closing. As Microsoft dissolves its elite research group, we're seeing a massive pivot from 'what is possible' to 'what is profitable'\u2014here is what that means for your career."
+  },
+  "draft": {
+    "hook": "Imagine walking into a lab with a breakthrough idea for a new neural architecture, only to be told the budget is now strictly for features that ship this quarter. Microsoft just dissolved its elite AI Frontiers group, signaling the end of the \"blank check\" era for research.",
+    "key_takeaways": [
+      "\ud83d\udcc9 \ud835\udde7\ud835\uddf5\ud835\uddf2 \ud835\uddd8\ud835\ude05\ud835\uddf6\ud835\ude01: Microsoft is moving away from open-ended research to prioritize immediate product integration.",
+      "\ud83d\udcb0 \ud835\udde7\ud835\uddf5\ud835\uddf2 \ud835\udde6\ud835\uddf5\ud835\uddf6\ud835\uddf3\ud835\ude01: We are leaving the \"What is possible?\" phase and entering the \"What is profitable?\" era of AI.",
+      "\ud83d\udee0\ufe0f \ud835\udde7\ud835\uddf5\ud835\uddf2 \ud835\udddc\ud835\uddfa\ud835\uddfd\ud835\uddee\ud835\uddf0\ud835\ude01: The next wave of AI careers will favor engineering stability and deployment over theoretical discovery."
+    ],
+    "discussion_question": "\ud83d\udcac Is the death of open-ended research at Big Tech a win for consumer products or a loss for long-term innovation?",
+    "hashtags": [
+      "#ArtificialIntelligence",
+      "#Microsoft",
+      "#AIResearch",
+      "#FutureOfWork",
+      "#TechNews"
+    ],
+    "full_post": "Imagine walking into a lab with a breakthrough idea for a new neural architecture, only to be told the company is only interested in things that can ship in the next sprint. Microsoft just dissolved its elite AI Frontiers group, signaling the end of the \"blank check\" era for research.\\n\\n\ud83d\udcc9 \ud835\udde7\ud835\uddf5\ud835\uddf2 \ud835\uddd8\ud835\ude05\ud835\uddf6\ud835\ude01: Microsoft is moving away from open-ended research to prioritize immediate product integration.\\n\\n\ud83d\udcb0 \ud835\udde7\ud835\uddf5\ud835\uddf2 \ud835\udde6\ud835\uddf5\ud835\uddf6\ud835\uddf3\ud835\ude01: We are leaving the \"What is possible?\" phase and entering the \"What is profitable?\" era of AI.\\n\\n\ud83d\udee0\ufe0f \ud835\udde7\ud835\uddf5\ud835\uddf2 \ud835\udddc\ud835\uddfa\ud835\uddfd\ud835\uddee\ud835\uddf0\ud835\ude01: The next wave of AI careers will favor engineering stability and deployment over theoretical discovery.\\n\\n\ud83d\udcac Is the death of open-ended research at Big Tech a win for consumer products or a loss for long-term innovation?\\n\\nSource: https://hunch.net/?p=13764006\\n\\n#ArtificialIntelligence #Microsoft #AIResearch #FutureOfWork #TechNews"
+  },
+  "email_sent": true
+}
