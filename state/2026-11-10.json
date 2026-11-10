@@ -1,0 +1,57 @@
+{
+  "date": "2026-11-10",
+  "scouted_articles": [
+    {
+      "title": "Claude Fable 5.2 and Mythos 5.2",
+      "link": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+      "summary": "Comments",
+      "source": "Hacker News",
+      "published": "Mon, 09 Nov 2026 18:01:10 +0000"
+    },
+    {
+      "title": "USPS now offers official ZIP Code boundary polygons",
+      "link": "https://postalpro.usps.com/zcb",
+      "summary": "Comments",
+      "source": "Hacker News",
+      "published": "Mon, 09 Nov 2026 19:58:59 +0000"
+    },
+    {
+      "title": "Fable 5.2 one-shotted my nephew's dream game",
+      "link": "https://notesbylex.com/fable-5-2-one-shotted-my-nephews-dream-game",
+      "summary": "Comments",
+      "source": "Hacker News",
+      "published": "Mon, 09 Nov 2026 23:08:13 +0000"
+    },
+    {
+      "title": "Anthropic reportedly plans to move forward with IPO plans",
+      "link": "https://techcrunch.com/2026/11/09/anthropic-reportedly-plans-to-move-forward-with-ipo-plans/",
+      "summary": "The AI company is expected to set its valuation range this week, the Wall Street Journal reported.",
+      "source": "TechCrunch",
+      "published": "Tue, 10 Nov 2026 01:27:12 +0000"
+    },
+    {
+      "title": "Jensen Huang reportedly engaged a PR firm with a history of handling  high-profile sex scandals a year ago",
+      "link": "https://techcrunch.com/2026/11/09/jensen-huang-reportedly-engaged-a-pr-firm-with-a-history-of-handling-high-profile-sex-scandals-a-year-ago/",
+      "summary": "The PR firm was enlisted shortly after an October 2025 New York Times report described Alice Huang's business dealings with Jensen Huang, Wired reported.",
+      "source": "TechCrunch",
+      "published": "Mon, 09 Nov 2026 23:28:37 +0000"
+    },
+    {
+      "title": "Hotel giant Wyndham exposed customer data after app security lapse",
+      "link": "https://techcrunch.com/2026/11/09/hotel-giant-wyndham-exposed-customer-data-after-app-security-lapse/",
+      "summary": "Exclusive: Wyndham left a hardcoded credential in its customer app, allowing anyone to access customer data. The hotel giant wouldn't say if it has the ability to check for any past unauthorized access.",
+      "source": "TechCrunch",
+      "published": "Mon, 09 Nov 2026 23:03:46 +0000"
+    }
+  ],
+  "curated_topic": {
+    "selected_title": "Claude Fable 5.2 and Mythos 5.2",
+    "selected_link": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+    "selected_source": "Hacker News",
+    "virality_score": 94,
+    "why_it_matters": "Anthropic's release of the 5.2 series represents a massive leap in reasoning and 'one-shot' coding capabilities, directly impacting developer workflows and AI integration strategies.",
+    "hook_angle": "We just crossed the 'one-shot' threshold. With Fable 5.2 reportedly building entire games from single prompts, the conversation for tech leads is no longer about 'if' AI can code, but how we manage a 10x increase in codebase velocity."
+  },
+  "draft": null,
+  "email_sent": false
+}
