@@ -1,11 +1,9 @@
 name: Daily LinkedIn Assistant
 
 on:
-  schedule:
-    # 21:30 UTC = 3:00 AM IST
-    # 22:30 UTC = 4:00 AM IST
-    # 23:30 UTC = 5:00 AM IST
-    - cron: '30 21,22,23 * * *'
+  # Automated schedule disabled:
+  # schedule:
+  #   - cron: '30 21,23,1,2 * * *'
   workflow_dispatch: # Allows manual trigger anytime from the GitHub Actions tab
 
 jobs:
