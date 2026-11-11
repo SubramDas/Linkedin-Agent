@@ -45,29 +45,19 @@
     }
   ],
   "curated_topic": {
-    "selected_title": "OpenAI, Anthropic face new oversight as New York\u2019s AI safety law takes effect",
-    "selected_link": "https://techcrunch.com/2026/11/10/openai-anthropic-face-new-oversight-as-new-yorks-ai-safety-law-takes-effect/",
-    "selected_source": "TechCrunch",
-    "virality_score": 94,
-    "why_it_matters": "This marks the first major US state-level enforcement of AI safety standards, forcing giants like OpenAI and Anthropic to move from voluntary ethics to mandatory legal compliance.",
-    "hook_angle": "The era of 'move fast and break things' in AI is officially over in New York. Is this the regulatory blueprint the rest of the world has been waiting for, or a blow to American innovation?"
+    "selected_title": "Google SWE points 48 AI agents at NASA Lidar, finds unmapped Maya pyramid in 72h",
+    "selected_link": "https://pietromiotti.com/latest/maya-site/?maya",
+    "selected_source": "Hacker News",
+    "virality_score": 95,
+    "why_it_matters": "Real-world proof that lightweight multi-agent swarms can solve massive brute-force analysis problems over a weekend.",
+    "hook_angle": "How agent swarms are changing research and discovery economics."
   },
   "draft": {
-    "hook": "Imagine shipping a revolutionary AI feature at midnight and waking up to a state-mandated legal audit. The era of \"move fast and break things\" in AI just officially hit a legislative brick wall in New York.",
-    "key_takeaways": [
-      "\u2696\ufe0f \ud835\udde7\ud835\uddf5\ud835\uddf2 \ud835\udde1\ud835\uddf2\ud835\ude04 \ud835\udde5\ud835\ude02\ud835\uddf9\ud835\uddf2\ud835\ude00: Moves OpenAI and Anthropic from voluntary ethics to mandatory legal compliance.",
-      "\ud83d\udee1\ufe0f \ud835\udde7\ud835\uddf5\ud835\uddf2 \ud835\udde6\ud835\uddee\ud835\uddf3\ud835\uddf2\ud835\ude01\ud835\ude06 \ud835\uddd5\ud835\uddee\ud835\uddff: Models must pass state-level audits before deployment, ending \"ship first, fix later.\"",
-      "\ud83d\uddfa\ufe0f \ud835\udde7\ud835\uddf5\ud835\uddf2 \ud835\uddd5\ud835\uddf9\ud835\ude02\ud835\uddf2\ud835\uddfd\ud835\uddff\ud835\uddf6\ud835\uddfb\ud835\ude01: Sets a precedent that could force a fragmented patchwork of AI laws across the US."
-    ],
-    "discussion_question": "\ud83d\udcac Is this the regulatory guardrail we\u2019ve been waiting for, or is it a blow to American innovation?",
-    "hashtags": [
-      "#AI",
-      "#TechRegulation",
-      "#OpenAI",
-      "#Innovation",
-      "#ArtificialIntelligence"
-    ],
-    "full_post": "Imagine shipping a revolutionary AI feature at midnight and waking up to a state-mandated legal audit. The era of \"move fast and break things\" in AI just officially hit a legislative brick wall in New York.\n\n\u2696\ufe0f \ud835\udde7\ud835\uddf5\ud835\uddf2 \ud835\udde1\ud835\uddf2\ud835\ude04 \ud835\udde5\ud835\ude02\ud835\uddf9\ud835\uddf2\ud835\ude00: Moves OpenAI and Anthropic from voluntary ethics to mandatory legal compliance.\n\n\ud83d\udee1\ufe0f \ud835\udde7\ud835\uddf5\ud835\uddf2 \ud835\udde6\ud835\uddee\ud835\uddf3\ud835\uddf2\ud835\ude01\ud835\ude06 \ud835\uddd5\ud835\uddee\ud835\uddff: Models must pass state-level audits before deployment, ending \"ship first, fix later.\"\n\n\ud83d\uddfa\ufe0f \ud835\udde7\ud835\uddf5\ud835\uddf2 \ud835\uddd5\ud835\uddf9\ud835\ude02\ud835\uddf2\ud835\uddfd\ud835\uddff\ud835\uddf6\ud835\uddfb\ud835\ude01: Sets a precedent that could force a fragmented patchwork of AI laws across the US.\n\n\ud83d\udcac Is this the regulatory guardrail we\u2019ve been waiting for, or is it a blow to American innovation?\n\nSource: https://techcrunch.com/2026/11/10/openai-anthropic-face-new-oversight-as-new-yorks-ai-safety-law-takes-effect/\n\n#AI #TechRegulation #OpenAI #Innovation #ArtificialIntelligence"
+    "hook": "A solo Google engineer just pointed 48 autonomous AI agents at raw NASA LiDAR data.",
+    "key_takeaways": [],
+    "discussion_question": "",
+    "hashtags": [],
+    "full_post": "A solo Google engineer just pointed 48 autonomous AI agents at raw NASA LiDAR data.\n\nIn 72 hours, they found a completely unmapped Maya pyramid.\n\nWhat usually takes archaeological teams years of machete-hacking through jungle terrain was solved over a weekend for practically zero marginal cost.\n\nHere is why this matters for software teams:\n\n\u26a1 \ud835\udde6\ud835\ude04\ud835\uddee\ud835\uddff\ud835\uddfa \ud835\udde8\ud835\ude01\ud835\uddf6\ud835\uddf9\ud835\uddf6\ud835\ude01\ud835\ude06: It wasn't one massive model doing the heavy lifting, but a network of 48 focused agents cross-checking candidate coordinates.\n\ud83d\udd0d \ud835\udde7\ud835\uddf5\ud835\uddf2 \ud835\udde1\ud835\uddf2\ud835\ude04 \ud835\uddd5\ud835\uddff\ud835\ude02\ud835\ude01\ud835\uddf2-\ud835\uddd9\ud835\uddfc\ud835\uddff\ud835\uddf0\ud835\uddf2: Problems once gated by human attention spans are becoming trivial parallel compute tasks.\n\ud83d\udccc \ud835\udde7\ud835\uddf5\ud835\uddf2 \ud835\uddd8\ud835\uddfb\ud835\uddf4\ud835\uddf6\ud835\uddfb\ud835\uddf2\ud835\uddf2\ud835\uddff'\ud835\ude00 \ud835\udddf\ud835\uddf2\ud835\ude03\ud835\uddf2\ud835\uddff\ud835\uddee\ud835\uddf4\ud835\uddf2: One developer with an orchestrator now has the discovery bandwidth of an entire research department.\n\nWhen brute-force analysis costs virtually nothing, what is the biggest backlog problem in your industry that is suddenly solvable?\n\nOriginal writeup: https://pietromiotti.com/latest/maya-site/?maya\n\n#ArtificialIntelligence #SoftwareEngineering #MultiAgentSystems #TechInnovation"
   },
   "email_sent": true
 }
